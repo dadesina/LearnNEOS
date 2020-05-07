@@ -1,0 +1,22 @@
+'LearnNEOS.Site:Document.AbstractPage':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'LearnNEOS.Site:Constraint.Content.Restricted': false
+  constraints:
+    nodeTypes:
+      'LearnNEOS.Site:Document.HomePage': false
+      'LearnNEOS.Site:Constraint.Document.Restricted': false
+  properties:
+    hideFromMainMenu:
+      type: boolean
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: visibility
